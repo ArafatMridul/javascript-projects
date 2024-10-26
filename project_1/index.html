@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather widget</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="search-section">
+                <input type="text" name="search-bar" id="search-bar" placeholder="Enter city name here..."> 
+                <i class="ri-search-line search"></i>
+            </div>
+            <div class="error">
+                <p>Please enter correct country</p>
+            </div>
+            <div class="weather-section">
+                <h1 class="city_name">City Name</h1>
+                <div class="weather-icon">
+                    <img src="./assets/sunny.png" alt="" height="200" width="200" class="weather_widget">
+                </div>
+                <h2 class="temp">Temperature&deg;C</h2>
+                <div class="weather-info">
+                    <div class="humidity">
+                        <img src="./assets/humidity.png" alt="" height="80" width="80">
+                        <div class="value">
+                            <p class="hum_val">22&deg;C</p>
+                            <p>humidity</p>
+                        </div>
+                    </div>
+                    <div class="wind">
+                        <img src="./assets/wind.png" alt="" height="80" width="80">
+                        <div class="value">
+                            <p class="wind_val">10 km/h</p>
+                            <p>Wind</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
