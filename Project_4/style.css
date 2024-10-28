@@ -46,4 +46,95 @@ ol {
 
 body {
     font-family: "Poppins", serif;
+    background-color: #002339;
+    padding: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 180px 20%;
+}
+
+.container h1 {
+    font-size: 45px;
+    color: #fff;
+}
+
+.container h1 span {
+    color: #019f55;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #019f55;
+}
+
+.password-input {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+input {
+    width: 100%;
+    font-size: 32px;
+    padding: 12px;
+    border: 0;
+    outline: 0;
+}
+
+#copy-btn {
+    width: 40px;
+    cursor: pointer;
+}
+
+.generate-btn {
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    padding: 12px 24px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: #019f55;
+    color: #fff;
+}
+
+.generate-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 525px) {
+    .container {
+        margin: 200px 0;
+        width: 100%;
+        gap: 48px;
+    }
+
+    .container h1 {
+        font-size: 32px;
+    }
+
+    .password-input {
+        padding: 18px 24px;
+    }
+    
+    input {
+        font-size: 24px;
+    }
+
+    #copy-btn {
+        width: 24px;
+    }
+
+    .generate-btn {
+        font-size: 16px;
+        width: fit-content;
+    }
 }
