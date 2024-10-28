@@ -67,7 +67,7 @@ body {
 
 .quiz-section {
     display: grid;
-    gap: 12px;
+    gap: 24px;
 }
 
 .quiz-section h2 {
@@ -76,7 +76,7 @@ body {
 
 .answer-buttons {
     display: grid;
-    gap: 12px;
+    gap: 18px;
 }
 
 .btn {
@@ -92,7 +92,7 @@ body {
 }
 
 .btn:hover:not(:disabled) {
-    background-color: #000;
+    background-color: #001e4d;
     color: #fff;
 }
 

@@ -1,128 +1,127 @@
 const questions = [
     {
-        question: "Question 1",
+        question: "Which Producer made the album called Rockstar without a guitar",
         answers: [
-            { text:"Answer 1?", correct: "false"},
-            { text:"Answer 2?", correct: "false"},
-            { text:"Answer 3?", correct: "true"},
-            { text:"Answer 4?", correct: "false"},
+            { text:"Calm", correct: "false"},
+            { text:"Jokhay", correct: "false"},
+            { text:"Umair", correct: "true"},
+            { text:"Metro", correct: "false"},
         ]
     },
     {
-        question: "Question 2",
+        question: "Which is the debut album of Juice WRLD?",
         answers: [
-            { text:"Answer 1?", correct: "true"},
-            { text:"Answer 2?", correct: "false"},
-            { text:"Answer 3?", correct: "false"},
-            { text:"Answer 4?", correct: "false"},
+            { text:"Goodbye & Good Riddance", correct: "true"},
+            { text:"Chasing Demons", correct: "false"},
+            { text:"Death race for Love", correct: "false"},
+            { text:"Legends never die", correct: "false"},
         ]
     },
     {
-        question: "Question 3",
+        question: "Valorant best skin for vandal?",
         answers: [
-            { text:"Answer 1?", correct: "false"},
-            { text:"Answer 2?", correct: "true"},
-            { text:"Answer 3?", correct: "false"},
-            { text:"Answer 4?", correct: "false"},
+            { text:"Oni", correct: "false"},
+            { text:"Prime", correct: "true"},
+            { text:"Prelude to chaos", correct: "false"},
+            { text:"Araxys", correct: "false"},
         ]
     },
     {
-        question: "Question 4",
+        question: "Valorant best skin for Phantom?",
         answers: [
-            { text:"Answer 1?", correct: "false"},
-            { text:"Answer 2?", correct: "false"},
-            { text:"Answer 3?", correct: "false"},
-            { text:"Answer 4?", correct: "true"},
+            { text:"Neo Frontier", correct: "false"},
+            { text:"Prime", correct: "false"},
+            { text:"Oni", correct: "false"},
+            { text:"Recon", correct: "true"},
         ]
     },
 ];
 
 const questionTitle = document.querySelector(".question-title");
-const answerBtnsSection = document.querySelector(".answer-buttons");
+const optionContainer = document.querySelector(".answer-buttons");
+const optionBtns = document.querySelectorAll(".btn");
 const nextBtn = document.querySelector(".next-btn");
 
-let questionIndex = 0;
+let currIndex = 0;
 let score = 0;
 
-
-function startQuiz() {
-    questionIndex = 0;
-    score = 0;
-
-    nextBtn.innerText = "Next";
-    showQuestions();
-}
-
-function resetAns() {
-    nextBtn.style.display = "none";
-    while(answerBtnsSection.firstChild) {
-        answerBtnsSection.removeChild(answerBtnsSection.firstChild);
-    }
-}
-
 function showQuestions() {
-    resetAns();
-    let currentQuestion = questions[questionIndex];
-    questionTitle.innerText = `${questionIndex+1}. ${currentQuestion.question}`;
+    reserState();
+    const currQuestion = questions[currIndex];
+    questionTitle.innerHTML = `${currIndex+1}. ${currQuestion.question}`;
 
-    currentQuestion.answers.forEach((ans) => {
-        let answerText = document.createElement("button");
-        answerText.classList.add("btn");
-        if(ans.correct) {
-            answerText.dataset.correct = ans.correct;
+    currQuestion.answers.forEach((answer) => {
+        let optionBtn = document.createElement("button");
+        optionBtn.classList.add("btn");
+        optionBtn.innerText = answer.text;
+        optionContainer.appendChild(optionBtn);
+
+        if(answer.correct) {
+            optionBtn.dataset.correct = answer.correct;
         }
-        console.log(answerText);
-        answerText.innerText = ans.text;
-        answerBtnsSection.appendChild(answerText);
 
-        answerText.addEventListener("click", showAnswer)
-    })
+        optionBtn.addEventListener("click", checkAns);
+    }) 
 }
 
-function showAnswer(e) {
-        const selectedBtn = e.target;
-        const isCorrect = selectedBtn.dataset.correct === "true";
+function checkAns(e) {
+    const clickedOption = e.target;
+    const isCorrect = clickedOption.dataset.correct === "true";
+    if(isCorrect) {
+        clickedOption.classList.add("correct");
+        score++;
+    } else {
+        clickedOption.classList.add("incorrect");
+    }
 
-        if(isCorrect) {
-            selectedBtn.classList.add("correct");
-            score++;
-        } else {
-            selectedBtn.classList.add("incorrect");
+    Array.from(optionContainer.children).forEach((optBtn) => {
+        if(optBtn.dataset.correct === "true") {
+            optBtn.classList.add("correct");
         }
+        optBtn.disabled = true;
+    });
 
-        Array.from(answerBtnsSection.children).forEach((button) => {
-            if(button.dataset.correct === "true") {
-                button.classList.add("correct");
-            }
-            button.disabled = true;
-        })
-        nextBtn.style.display = "block";
-    }            
+    nextBtn.style.display = "block";
+    nextBtn.addEventListener("click", nextQuestion);
+}
 
-function handleNext() {
-    questionIndex++;
+function showScore() {
+    questionTitle.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    
+    nextBtn.innerText = "Play Again";
+}
 
-    if(questionIndex < questions.length) {
+function handleNextQuestion() {
+    reserState();
+    currIndex++;
+    if(currIndex < questions.length) {
         showQuestions();
     } else {
         showScore();
     }
 }
 
-function showScore() {
-    resetAns();
-    questionTitle.innerHTML = `you scored ${score} out of ${questions.length}!`;
-
-    nextBtn.style.display = "block";
-    nextBtn.innerText = "Play Again";
-}
-
-nextBtn.addEventListener("click", () => {
-    if(questionIndex < questions.length) {
-        handleNext();
+function nextQuestion() {
+    if(currIndex < questions.length) {
+        handleNextQuestion();
     } else {
         startQuiz();
     }
-})
+}
+
+function reserState() {
+    while(optionContainer.firstChild) {
+        optionContainer.removeChild(optionContainer.firstChild);
+    }
+}
+
+function startQuiz() {
+    currIndex = 0;
+    score = 0;
+
+    nextBtn.innerText = "Next";
+    showQuestions();
+}
+
 
 startQuiz();
