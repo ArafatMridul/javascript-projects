@@ -19,7 +19,7 @@ function generatePass() {
     password += number[Math.floor(Math.random() * number.length)];
     password += symbol[Math.floor(Math.random() * symbol.length)];
 
-    while(passLen > password.length) {
+    while (passLen > password.length) {
         password += allChar[Math.floor(Math.random() * allChar.length)];
     }
 
@@ -29,4 +29,4 @@ function generatePass() {
 copyBtn.addEventListener("click", () => {
     inputBox.select();
     document.execCommand("copy");
-})
+});

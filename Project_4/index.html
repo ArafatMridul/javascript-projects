@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-</head>
-<body>
-    <div class="container">
-        <h1>Generate a <br><span>Random Password</span></h1>
-        <div class="password-input">
-            <input type="text" name="pass" id="pass" placeholder="Password">
-            <img src="./assets/copy.png" alt="" id="copy-btn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Generate a <br /><span>Random Password</span></h1>
+            <div class="password-input">
+                <input
+                    type="text"
+                    name="pass"
+                    id="pass"
+                    placeholder="Password"
+                />
+                <img src="./assets/copy.png" alt="" id="copy-btn" />
+            </div>
+            <button class="generate-btn">
+                <img src="./assets/thunder-bolt.png" alt="" />Generate Password
+            </button>
         </div>
-        <button class="generate-btn"><img src="./assets/thunder-bolt.png" alt="">Generate Password</button>
-    </div>
-</body>
+    </body>
 </html>
