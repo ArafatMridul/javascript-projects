@@ -46,4 +46,90 @@ ol {
 
 body {
     font-family: "Poppins", serif;
+    padding: 12px;
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    color: #fff;
+}
+
+.container {
+    max-width: 100%;
+    width: 600px;
+    padding: 24px;
+    margin-top: 100px;
+    margin-inline: auto;
+}
+
+.container h1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.container h1 {
+    font-size: 32px;
+    display: flex;
+    gap: 12px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.container h1 img {
+    width: 50px;
+}
+
+.add-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 32px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(#8228d0, #5804a2);
+    cursor: pointer;
+}
+
+.add-note img {
+    width: 30px;
+}
+
+.input-text {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 140px;
+    font-size: 20px;
+    background: #fff;
+    color: #333;
+    padding: 12px;
+    margin: 24px 0;
+    border-radius: 5px;
+    outline: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.input-text #text-input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.input-text img {
+    width: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 12px;
+    cursor: pointer;
+}
+
+@media (max-width: 668px) {
+    .container {
+        margin: 50px auto;
+    }
 }
