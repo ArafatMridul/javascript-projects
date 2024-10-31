@@ -27,7 +27,7 @@ h4 {
     margin: 0;
 }
 
-imput,
+input,
 textarea,
 button,
 select {
@@ -46,4 +46,101 @@ ol {
 
 body {
     font-family: "Poppins", serif;
+    background: linear-gradient(135deg, #4203a9, #90bafc);
+    padding: 12px;
+    color: #fff;
+}
+
+.container {
+    max-width: 100%;
+    width: 600px;
+    margin-top: 150px;
+    margin-inline: auto;
+    padding: 24px;
+}
+
+.container h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.container h1 span {
+    color: #ffff26;
+}
+
+.calender-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(255, 255, 255, 0.3);
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.calender-section input {
+    flex: 1;
+    padding: 14px 20px;
+    outline: 0;
+    border: 0;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.calculate-btn {
+    background: #ffff76;
+    border: none;
+    outline: none;
+    color: #333;
+    font-weight: 500;
+    padding: 14px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calender-section input::-webkit-calendar-picker-indicator {
+    inset: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-position: calc(100% - 14px);
+    background-size: 30px;
+}
+
+.display-age {
+    font-size: 32px;
+    text-align: center;
+    padding: 20px;
+}
+
+.display-age span {
+    color: #ffff26;
+}
+
+@media (max-width: 610px) {
+    .container {
+        padding: 0;
+    }
+
+    .container h1 {
+        font-size: 32px;
+        padding-left: 24px;
+    }
+
+    .calender-section {
+        padding: 8px 12px;
+    }
+
+    .calender-section input {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .calculate-btn {
+        padding: 8px 12px;
+    }
+
+    .display-age {
+        font-size: 20px;
+    }
 }
