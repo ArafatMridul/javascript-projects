@@ -46,4 +46,90 @@ ol {
 
 body {
     font-family: "Poppins", serif;
+    background-color: #262a2f;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 32px 48px;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input {
+    width: 100%;
+    font-size: 20px;
+    padding: 12px;
+    border: 1px solid hsl(0, 0%, 15%, 0.3);
+    outline: none;
+    border-radius: 8px;
+    margin-block: 18px;
+}
+
+input::placeholder {
+    opacity: 0.5;
+}
+
+.qr-img {
+    width: 250px;
+    max-height: 0px;
+    border-radius: 10px;
+    margin-inline: auto;
+    border: none;
+    transition: max-height 0.7s ease;
+}
+
+.container.img-appear .qr-img {
+    max-height: 250px;
+    border: 1px solid hsla(0, 0%, 15%, 0.3);
+}
+
+#code {
+    width: 100%;
+    padding: 12px;
+}
+
+.generate-code {
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    padding: 18px;
+    border: none;
+    outline: none;
+    background-color: #494eea;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.error {
+    animation: shake 0.25s linear 5;
+    border: 1px solid red;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-13px);
+    }
+    
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(-13px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
