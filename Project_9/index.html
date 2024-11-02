@@ -8,6 +8,11 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <button class="success" onclick="showNotification(successMsg)">Success</button>
+        <button class="error" onclick="showNotification(errorMsg)">Error</button>
+        <button class="invalid" onclick="showNotification(invalidMsg)">Invalid</button>
+    </div>
+    <div class="toast-box"></div>
 </body>
 </html>
