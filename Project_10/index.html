@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
-    <link rel="stylesheet" href="style.css">nk
-    <script src="app.js" defer></script>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Music Player</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav">
+                <i class="fa-solid fa-angle-left"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="cover">
+                <img src="./asset/cover-pic.jpeg" alt="" />
+            </div>
+            <h1>Come Through</h1>
+            <p>Umair, Talha Anjum, Abdullah Maharvi</p>
+
+            <audio id="song">
+                <source
+                    src="./asset/Umair, Talha Anjum, Abdullah Maharvi - COME THROUGH (Official Audio).mp3"
+                    type="audio/mpeg"
+                />
+            </audio>
+            <input type="range" value="0" id="progress" />
+
+            <div class="controls">
+                <i class="fa-solid fa-backward-fast"></i>
+                <i class="fa-solid fa-play" id="play-icon" onclick="playPause()"></i>
+                <i class="fa-solid fa-forward-fast"></i>
+            </div>
+        </div>
+    </body>
 </html>
