@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop Watch</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stop Watch</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="time">00:00:00</h1>
+            <div class="buttons">
+                <i class="fa-solid fa-stop" onclick="stopTime()"></i>
+                <i class="fa-solid fa-play" id="play-pause" onclick="startTime()"></i>
+                <i class="fa-solid fa-rotate-left" onclick="resetTime()"></i>
+            </div>
+        </div>
+    </body>
 </html>
