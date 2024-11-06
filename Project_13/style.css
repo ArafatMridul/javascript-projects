@@ -114,3 +114,30 @@ body {
     box-shadow: 0 2px 5px #6fd649;
     cursor: pointer;
 }
+
+@media (max-width: 618px) {
+    .pop-up {
+        width: 90%;
+        margin: 12px;
+        padding: 60px 12px 30px 12px;
+    }
+
+    .pop-up img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pop-up h1 {
+        font-size: 32px;
+    }
+
+    .pop-up p {
+        font-size: 16px;
+        width: 30ch;
+        margin-inline: auto;
+    }
+
+    .ok-btn {
+        padding-block: 14px;
+    }
+}
