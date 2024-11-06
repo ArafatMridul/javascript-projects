@@ -46,4 +46,72 @@ ol {
 
 body {
     font-family: "Poppins", serif;
+    background-color: #E3F9FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #3a4452;
+    padding: 48px;
+    border-radius: 12px;
+    max-width: 100%;
+    width: 600px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.calculator div:not(:first-child) {
+    display: flex;
+    gap: 16px;
+}
+
+.calculator .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.calculator .display input {
+    width: 100%;
+    text-align: end;
+    font-size: 45px;
+    box-shadow: none;
+    caret-color: transparent;
+}
+
+.calculator input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: transparent;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.equal {
+    flex: 2.5 !important;
+}
+
+@media (max-width: 618px) {
+    .container {
+        padding: 48px 24px;
+        margin: 12px;
+    }
+
+    .calculator .display input {
+        font-size: 32px;
+    }
+
+    .calculator input {
+        font-size: 16px;
+    }
 }
