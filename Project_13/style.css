@@ -46,4 +46,71 @@ ol {
 
 body {
     font-family: "Poppins", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3c5077;
+}
+
+.submit-btn {
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #6fd649;
+    cursor: pointer;
+}
+
+.pop-up {
+    position: absolute;
+    background-color: #fff;;
+    text-align: center;
+    padding: 32px;
+    border-radius: 12px;
+    padding-top: 90px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-750px) scale(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.pop-up img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    margin-inline: auto;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.pop-up h1 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.pop-up p {
+    font-size: 20px;
+    width: 35ch;
+    margin-bottom: 35px;
+}
+
+.pop-up.appear {
+    transform: translate(0);
+}
+
+.ok-btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 18px 0;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #6fd649;
+    box-shadow: 0 2px 5px #6fd649;
+    cursor: pointer;
 }
