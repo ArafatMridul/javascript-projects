@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header id="header">
+            <div class="header-section">
+                <div class="logo">
+                    <picture>
+                        <source
+                            media="(max-width: 768px)"
+                            srcset="./assets/foodie-hamburger-logo.png"
+                            width="40"
+                            height="45"
+                        />
+                        <img src="./assets/foodie-hamburger-logo.png" alt="" />
+                    </picture>
+                </div>
+                <div class="hamburger-menu-container">
+                    <div class="hamburger-menu">
+                        <span class="hamburger-icon">&#9776;</span>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                    <span class="close-icon">&times;</span>
+                    <a href="#top-picks">Top Picks</a>
+                    <a href="#whopper">Whopper</a>
+                    <a href="#stunner-menu">Stunner Menu</a>
+                    <a href="#new-foodie-collection">New Foodie Collection</a>
+                    <a href="#deal-of-the-day">Deal of the Day</a>
+                    <i class="fa-regular fa-moon" id="dark-light"></i>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/hero-img-mobile.png"
+                        width="326"
+                        height="196"
+                    />
+                    <img src="./assets/hero_img.png" alt="" />
+                </picture>
+                <p>Well, You can’t resist anymore!</p>
+            </section>
+            <section class="details-section top-picks" id="top-picks">
+                <p>Top Picks</p>
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/top-picks-mobile.png"
+                        width="294"
+                        height="196"
+                    />
+                    <img src="./assets/top_picks.png" alt="" />
+                </picture>
+            </section>
+            <section class="details-section whopper" id="whopper">
+                <p>Whooper</p>
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/whopper-mobile.png"
+                        width="294"
+                        height="196"
+                    />
+                    <img src="./assets/whopper.png" alt="" />
+                </picture>
+            </section>
+            <section class="details-section stunner-menu" id="stunner-menu">
+                <p>Stunner Menu</p>
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/stunner-mobile.png"
+                        width="294"
+                        height="196"
+                    />
+                    <img src="./assets/stunner.png" alt="" />
+                </picture>
+            </section>
+            <section
+                class="details-section new-foodie-collection"
+                id="new-foodie-collection"
+            >
+                <p>New Foodie Collection</p>
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/new-foodie-mobile.png"
+                        width="294"
+                        height="196"
+                    />
+                    <img src="./assets/new-foodie.png" alt="" />
+                </picture>
+            </section>
+            <section
+                class="details-section deal-of-the-day"
+                id="deal-of-the-day"
+            >
+                <p>Deal of the Day</p>
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/deal-of-the-day-mobile.png"
+                        width="294"
+                        height="196"
+                    />
+                    <img src="./assets/deal_of_the_day.png" alt="" />
+                </picture>
+            </section>
+            <div class="footer">
+                <p><a href="#">Go to Top</a></p>
+            </div>
+        </main>
+    </body>
+</html>
